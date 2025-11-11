@@ -18,6 +18,9 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Ensure FastAPI file-upload dependency is installed
+RUN pip install --no-cache-dir python-multipart
+
 # Copy project files
 COPY . .
 
